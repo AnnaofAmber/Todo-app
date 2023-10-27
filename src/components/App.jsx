@@ -6,6 +6,7 @@ import { getError, getIsLoading } from "redux/selectors";
 import { useEffect } from "react";
 import { fetchTasks } from "redux/operations";
 import { StatusFilter } from "./StatusFilter/StatusFilter";
+import { AppBar } from "AppBar/AppBar";
 
 export const App = () => {
  const dispatch = useDispatch()
@@ -21,6 +22,7 @@ dispatch(fetchTasks())
   <CreateTaskForm/>
   <TasksList/>
   <StatusFilter/>
+  <AppBar/>
 </Layout>
   );
 };
