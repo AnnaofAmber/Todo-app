@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { deleteTask, toggleCompleted } from 'redux/operations';
 
-export const TaskItem = ({ task}) => {
+export const TaskItem = ({task}) => {
   const dispatch = useDispatch();
   const handleToggle = () => dispatch(toggleCompleted(task))
   const handleDelete = () => dispatch(deleteTask(task.id));

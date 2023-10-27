@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 axios.defaults.baseURL ='https://653a93302e42fd0d54d42228.mockapi.io'
 
 export const fetchTasks = createAsyncThunk(
-    'contacts/fetchAll', async(_, thunkAPI) =>{
+    'tasks/fetchAll', async(_, thunkAPI) =>{
         try{
             const response = await axios.get("/tasks")
             return response.data
@@ -16,7 +16,7 @@ export const fetchTasks = createAsyncThunk(
 )
 
 export const addTask = createAsyncThunk(
-    'contacts/addTask', async(text, thunkAPI) =>{
+    'tasks/addTask', async(text, thunkAPI) =>{
         try{
             const response = await axios.post("/tasks", {text})
             return response.data
@@ -28,7 +28,7 @@ export const addTask = createAsyncThunk(
 )
 
 export const deleteTask = createAsyncThunk(
-    'contacts/deleteTask', async(taskId, thunkAPI) =>{
+    'tasks/deleteTask', async(taskId, thunkAPI) =>{
         try{
             const response = await axios.delete(`/tasks/${taskId}`)
             return response.data
@@ -40,7 +40,7 @@ export const deleteTask = createAsyncThunk(
 )
 
 export const toggleCompleted = createAsyncThunk(
-    'contacts/toggleCompleted', async(task, thunkAPI) =>{
+    'tasks/toggleCompleted', async(task, thunkAPI) =>{
         try{
             const response = await axios.put(`/tasks/${task.id}`, {
                 completed: !task.completed,

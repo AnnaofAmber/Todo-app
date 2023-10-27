@@ -7,13 +7,13 @@ import { getFilterStatus } from "redux/selectors"
 export const StatusFilter = () =>{
 const dispatch = useDispatch()
 const filter = useSelector(getFilterStatus)
-const handleFilterChange = () => dispatch(setStatusFilter(filter))
+const handleFilterChange = filter => dispatch(setStatusFilter(filter))
 
     return(
         <div>
 <Button selected={filter === statusFilters.all} onClick={()=>handleFilterChange(statusFilters.all)}>All</Button>
-<Button selected={filter === statusFilters.all} onClick={()=>handleFilterChange(statusFilters.all)}>Active</Button>
-<Button selected={filter === statusFilters.all} onClick={()=>handleFilterChange(statusFilters.all)}>Completed</Button>
+<Button selected={filter === statusFilters.all} onClick={()=>handleFilterChange(statusFilters.active)}>Active</Button>
+<Button selected={filter === statusFilters.all} onClick={()=>handleFilterChange(statusFilters.completed)}>Completed</Button>
         </div>
     )
 }
