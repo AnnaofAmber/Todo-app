@@ -1,15 +1,16 @@
 import { useDispatch } from 'react-redux';
-import { deleteTask } from 'redux/operations';
+import { deleteTask, toggleCompleted } from 'redux/operations';
 
-export const TaskItem = ({ name, id }) => {
+export const TaskItem = ({ task}) => {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteTask(id));
+  const handleToggle = () => dispatch(toggleCompleted(task))
+  const handleDelete = () => dispatch(deleteTask(task.id));
 
   return (
     <li>
-      <input type="checkbox" />
-      {name} task
-      <button type="button" onClick={handleDelete} title={`Delete ${name}`}>
+      <input type="checkbox" onChange={handleToggle}/>
+      {task.name} task
+      <button type="button" onClick={handleDelete} title={`Delete ${task.name}`}>
         delete
       </button>
     </li>

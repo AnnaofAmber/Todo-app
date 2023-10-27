@@ -6,8 +6,8 @@ export const TasksList = () => {
   const tasks = useSelector(getTasks);
   return (
     <ul>
-      {tasks.map(({id, name}) => (
-        <TaskItem id={id} key={id} name={name} />
+      {tasks.map((task) => (
+        <TaskItem id={task.id} key={task.id} task={task} />
       ))}
     </ul>
   );
