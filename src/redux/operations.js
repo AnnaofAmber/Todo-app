@@ -16,9 +16,9 @@ export const fetchTasks = createAsyncThunk(
 )
 
 export const addTask = createAsyncThunk(
-    'contacts/addTask', async({name}, thunkAPI) =>{
+    'contacts/addTask', async(text, thunkAPI) =>{
         try{
-            const response = await axios.post("/tasks", {name})
+            const response = await axios.post("/tasks", {text})
             return response.data
         }
         catch(error){
