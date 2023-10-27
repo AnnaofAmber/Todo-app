@@ -8,7 +8,7 @@ export const TaskItem = ({ task}) => {
 
   return (
     <li>
-      <input type="checkbox" onChange={handleToggle}/>
+      <input type="checkbox" checked={task.completed} onChange={handleToggle}/>
       {task.name} task
       <button type="button" onClick={handleDelete} title={`Delete ${task.name}`}>
         delete
