@@ -1,3 +1,5 @@
+import scss from "./TasksList.module.scss"
+
 import { TaskItem } from 'components/TaskItem/TaskItem';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { statusFilters } from 'redux/constants';
@@ -18,7 +20,7 @@ export const TasksList = () => {
     const statusFilter = useSelector(getFilterStatus)
     const visibleTasks = getVisibleTasks(tasks, statusFilter);
   return (
-    <ul>
+    <ul className={scss['task-list']}>
       {visibleTasks.map((task) => (
         <TaskItem id={task.id} key={task.id} task={task} />
       ))}

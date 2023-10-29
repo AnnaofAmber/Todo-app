@@ -21,8 +21,9 @@ dispatch(fetchTasks())
 <Layout>
   <CreateTaskForm/>
   <TasksList/>
-  <StatusFilter/>
   <AppBar/>
+  <StatusFilter/>
+ 
 </Layout>
   );
 };
