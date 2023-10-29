@@ -9,7 +9,7 @@ export const TaskItem = ({task}) => {
 
   return (
     <li className={scss['task-item']}>
-<div>      <input className={scss['task-complete']} type="checkbox" checked={task.completed} onChange={handleToggle}/>
+<div className={scss['item-content']}>      <input className={scss['task-complete']} type="checkbox" checked={task.completed} onChange={handleToggle}/>
       {task.text}</div>
       <button className={scss['btn-delete']} type="button" onClick={handleDelete} title={`Delete ${task.text}`}>
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
