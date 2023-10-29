@@ -1,0 +1,14 @@
+.status{
+ border: none;
+ background-color: transparent;
+ font-size: 14px;
+font-weight: 700;
+letter-spacing: 0.1em;
+color: #9495A5;
+cursor: pointer;
+
+&.isSelected{
+    color: var(--bright-blue);
+}
+}
+
