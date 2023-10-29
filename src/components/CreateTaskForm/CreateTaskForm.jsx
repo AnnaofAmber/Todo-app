@@ -1,3 +1,5 @@
+import scss from "./CreateTaskForm.module.scss"
+
 import { useDispatch } from "react-redux"
 import { addTask } from "redux/operations"
 
@@ -13,10 +15,10 @@ const hadnleSubmit = e => {
 
     return (
 
-        <form onSubmit={hadnleSubmit}>
+        <form className={scss['form-add']} onSubmit={hadnleSubmit}>
             <label htmlFor="createTask"></label>
-            <input type="text" id="createTask" name="text"/>
-            <button>Add</button>
+            <input className={scss['input-add']} type="text" id="createTask" name="text"/>
+            <button className={scss['button-add']}></button>
         </form>
     )
 }

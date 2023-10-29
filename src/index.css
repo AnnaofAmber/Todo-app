@@ -1,12 +1,43 @@
 @import-normalize; /* bring in normalize.css styles */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;700;900&family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+:root{
+ /* Primary */
+
+  --bright-blue: hsl(220, 98%, 61%);
+  /* --check-background: linear-gradient hsl(192, 100%, 67%), hsl(280, 87%, 65%); */
+  
+  /* ### Neutral
+  
+  ### Light Theme */
+  
+  --very-light-gray: #FAFAFA;
+  --very-light-grayish-blue: #E4E5F1;
+  --light-grayish-blue: #D2D3DB;
+  --dark-grayish-blue: #9394A5;
+  --very-dark-grayish-blue: #484B6A;
+  
+  /* ### Dark Theme */
+  
+  --very-dark-blue: #161722;
+  --very-dark-desaturated-blue: #25273C;
+  --light-grayish-blue: #CACDE8;
+  --light-grayish-blue-hover: #E4E5F1; 
+  --dark-grayish-blue: #777A92;
+  --very-dark-grayish-blue: #4D5066;
+  --very-dark-grayish-blue: #393A4C
+
+}
+
 
 body {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--very-light-gray);
 }
 
 code {
