@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import scss from "./Layout.module.scss"
-import { themeChange } from "redux/operations"
-import { getTasks, getTheme } from "redux/selectors"
+// import { themeChange } from "redux/operations"
+import { getTheme } from "redux/selectors"
 import { setTheme } from "redux/filterStatusSlice"
 import clsx from "clsx"
 
