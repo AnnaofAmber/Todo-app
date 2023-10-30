@@ -6,7 +6,7 @@ import { TasksList } from "./TasksList/TasksList";
 import { useEffect } from "react";
 import { fetchTasks } from "redux/operations";
 import { StatusFilter } from "./StatusFilter/StatusFilter";
-import { AppBar } from "AppBar/AppBar";
+import { AppBar } from "components/Button/AppBar/AppBar";
 
 export const App = () => {
  const dispatch = useDispatch()

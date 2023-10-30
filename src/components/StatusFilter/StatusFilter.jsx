@@ -1,5 +1,5 @@
 // import scss from "./StatusFilter.scss"
-import { Button } from "Button/Button"
+import { Button } from "components/Button/Button"
 import { useDispatch, useSelector } from "react-redux"
 import { statusFilters } from "redux/constants"
 import { setStatusFilter } from "redux/filterStatusSlice"
