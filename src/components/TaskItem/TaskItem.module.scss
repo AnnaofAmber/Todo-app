@@ -5,6 +5,7 @@ background-color: white;
 display: flex;
 justify-content: space-between;
 align-items: center;
+border-bottom: 1px solid #E3E4F1;
 }
 
 
@@ -14,14 +15,9 @@ align-items: center;
     border-top-right-radius: 5px;
 }
 
-.task-item:last-child{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
 
-.task-item:not(:last-child){
-    border-bottom: 1px solid #E3E4F1;
-}
+
+
 
 .item-content{
     display: flex;

@@ -1,3 +1,5 @@
+import scss from './TaskCounter.module.scss'
+
 import { useSelector } from "react-redux"
 import { getTasks } from "redux/selectors"
 
@@ -12,6 +14,6 @@ return acc
 }, {active:0})
 
     return(
-        <p>{count.active} items left</p>
+        <p className={scss.counter}>{count.active} items left</p>
     )
 }
