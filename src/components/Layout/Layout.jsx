@@ -7,13 +7,14 @@ import clsx from "clsx"
 
 export const Layout = ({children})=>{
     const theme = useSelector(getTheme)
-    console.log(theme);
     const dispatch = useDispatch()
     const handleThemeChange = theme => dispatch(setTheme(theme))
     return(
-<div className={clsx(scss.container, {
+<div className={clsx(scss.wrapper, {
     [scss.dark]:theme
 })}>
+    <div className={scss.hero}></div>
+    <div className={scss.container}>
 <header className={scss.header}> 
         <h1 className={scss.title}>
             Todo
@@ -23,6 +24,7 @@ export const Layout = ({children})=>{
         <main >
 
             {children}</main>
+</div>
 </div>
     )
 }
