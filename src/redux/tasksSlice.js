@@ -23,7 +23,10 @@ const handlePending = state => {
   const tasksSlice = createSlice({
     name: 'tasks',
     initialState: initialState.tasks,
-
+     reducers:{
+      setTasks(state, action) {
+        state.items = action.payload}
+     },
     extraReducers:
     builder =>
     {
@@ -82,7 +85,7 @@ const handlePending = state => {
    },
 
  });
-   
+ export const { setTasks } = tasksSlice.actions;
  export const tasksReducer = tasksSlice.reducer;
   
 
