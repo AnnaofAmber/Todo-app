@@ -3,17 +3,26 @@ import scss from "./TaskItem.module.scss"
 import { useDispatch } from 'react-redux';
 import { deleteTask, toggleCompleted } from 'redux/operations';
 import React from "react";
+import clsx from "clsx";
+import { useSelector } from "react-redux";
+import { getTheme } from "redux/selectors";
+
 
 export const TaskItem = ({task}) => {
   const dispatch = useDispatch();
   const handleToggle = () => dispatch(toggleCompleted(task))
   const handleDelete = () => dispatch(deleteTask(task.id));
+  const theme = useSelector(getTheme)
  
   return (
-    
-
-     <li className={scss['task-item']}>
-<div className={scss['item-content']}>      <input className={scss['task-complete']} type="checkbox" checked={task.completed} onChange={handleToggle}/>
+  
+<li className={clsx(scss['task-item'], {
+            [scss.dark]:theme, [scss.completed]:task.completed
+        })}>
+<div className={scss['item-content']}>     
+ <input className={clsx(scss['task-complete'], {
+            [scss.dark]:theme, [scss.completed]:task.completed
+        })} type="checkbox" checked={task.completed} onChange={handleToggle}/>
       {task.text}</div>
       <button className={scss['btn-delete']} type="button" onClick={handleDelete} title={`Delete ${task.text}`}>
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
