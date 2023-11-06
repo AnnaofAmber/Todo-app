@@ -14,6 +14,18 @@ position: relative;
     box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
 
 }
+
+.dark{
+&.input-add{
+    background-color: #25273D;
+    color: #767992;
+}
+&.button-add{
+    background-color: #25273D;
+    border: 1px solid hsla(237, 14%, 26%, 1);
+}
+}
+
 .input-add::placeholder{
     color: #9495A5;
     font-size: 12px;
