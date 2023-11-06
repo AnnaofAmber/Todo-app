@@ -1,3 +1,4 @@
+import Draggable from "react-draggable";
 import scss from "./TasksList.module.scss"
 
 import { TaskItem } from 'components/TaskItem/TaskItem';
@@ -22,8 +23,9 @@ export const TasksList = () => {
   return (
     <ul className={scss['task-list']}>
       {visibleTasks.map((task) => (
-        <TaskItem id={task.id} key={task.id} task={task} />
-      ))}
+
+          <TaskItem id={task.id} key={task.id}  task={task} />
+    ))}
     </ul>
   );
 };

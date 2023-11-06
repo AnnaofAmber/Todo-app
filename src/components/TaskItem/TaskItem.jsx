@@ -1,14 +1,18 @@
+import Draggable from "react-draggable";
 import scss from "./TaskItem.module.scss"
 import { useDispatch } from 'react-redux';
 import { deleteTask, toggleCompleted } from 'redux/operations';
+import React from "react";
 
 export const TaskItem = ({task}) => {
   const dispatch = useDispatch();
   const handleToggle = () => dispatch(toggleCompleted(task))
   const handleDelete = () => dispatch(deleteTask(task.id));
-
+  const nodeRef = React.useRef(null);
   return (
-    <li className={scss['task-item']}>
+    <Draggable nodeRef={nodeRef} axis="y" bounds="parent"> 
+   <div ref={nodeRef}>
+     <li className={scss['task-item']}>
 <div className={scss['item-content']}>      <input className={scss['task-complete']} type="checkbox" checked={task.completed} onChange={handleToggle}/>
       {task.text}</div>
       <button className={scss['btn-delete']} type="button" onClick={handleDelete} title={`Delete ${task.text}`}>
@@ -17,5 +21,7 @@ export const TaskItem = ({task}) => {
 </svg>
       </button>
     </li>
+   </div>
+   </Draggable>
   );
 };
