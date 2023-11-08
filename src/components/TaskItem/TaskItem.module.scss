@@ -48,7 +48,10 @@ background-size: 0;
 .completed{
     &.task-item{
         text-decoration: line-through;
-        color: #4D5067;
+        color: hsla(233, 11%, 84%, 1);
+        &.dark{
+            color: hsla(233, 14%, 35%, 1);
+        }
         
     }
 

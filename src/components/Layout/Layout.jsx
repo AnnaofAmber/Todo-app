@@ -22,8 +22,8 @@ export const Layout = ({children})=>{
         <input className={scss.theme} type="checkbox" onChange={ () =>handleThemeChange(!theme)}/>
         </header>
         <main >
-
             {children}</main>
+            <p className={scss.drag}>Drag and drop to reorder list</p>
 </div>
 </div>
     )
