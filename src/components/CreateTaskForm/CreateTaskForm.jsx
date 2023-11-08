@@ -38,7 +38,9 @@ else{
             <input {...register('text', { required: true })} className={clsx(scss['input-add'], {
             [scss.dark]:theme, [scss['input-required']]:errors.text
         })} type="text" id="createTask" name="text" placeholder="Create a new todo..."/>
-        {errors.text && <div className={scss['container-required']}><span className={scss.required}>This field is required</span></div>}
+        {errors.text && <div  className={clsx(scss['container-required'], {
+            [scss.dark]:theme})}><span className={clsx(scss.required, {
+                [scss.dark]:theme})}>This field is required</span></div>}
         
             <button className={clsx(scss['button-add'], {
             [scss.dark]:theme
