@@ -1,8 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import scss from "./Layout.module.scss"
-// import { themeChange } from "redux/operations"
 import { getTheme } from "redux/selectors"
-import { setTheme } from "redux/filterStatusSlice"
+import { setTheme } from "redux/changeThemeSlice"
 import clsx from "clsx"
 
 export const Layout = ({children})=>{

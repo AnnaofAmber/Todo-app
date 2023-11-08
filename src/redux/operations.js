@@ -53,20 +53,3 @@ export const toggleCompleted = createAsyncThunk(
         }
     }
 )
-
-export const themeChange = createAsyncThunk(
-    'theme/themeChange', async(task, thunkAPI) => {
-        try{
-            const response = await axios.put(`/tasks/${task.id}`, {
-                theme: !task.theme,
-            })
-            return response.data
-        }
-        catch(error){
-            return thunkAPI.rejectWithValue(error.message)
-        }
-    }
-    
-
-
-)
