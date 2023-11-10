@@ -1,14 +1,16 @@
-.task-list{
-    position: relative;
-    list-style: none;
-    margin-top: 16px;
-    margin-bottom: 0;
-    padding: 0;
+.task-list {
+  position: relative;
+  list-style: none;
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding: 0;
 
-    
+  color: #494c6b;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
 
-color: #494C6B;
-font-size: 12px;
-font-weight: 400;
-letter-spacing: 0.1em;
+  @media only screen and (min-width: 768px) {
+    margin-top: 24px;
+  }
 }
