@@ -4,3 +4,36 @@
     }
 }
 
+.container{
+    background-color: var(--very-light-gray);
+    height: 100vh;
+}
+
+.none{
+    width: 100%;
+    height: 64px;
+    padding: 16px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e3e4f1;
+
+  
+    @media only screen and (min-width: 768px) {
+      padding: 21px 24px 24px 24px;
+      font-size: 18px;
+    }
+}
+
+.dark{
+    &.container{
+        background-color: #171823;
+    }
+
+    &.none{
+        background-color: #25273d;
+        color: #c8cbe7;
+        border-bottom: 1px solid #393a4b;
+    }
+}

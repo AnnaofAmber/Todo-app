@@ -25,7 +25,6 @@ import storage from 'redux-persist/lib/storage';
 const authConfig = {
   key: 'theme',
   storage,
-  // whitelist: ['token'],
 };
 
 export const rootReducer = combineReducers({

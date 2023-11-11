@@ -24,16 +24,17 @@ const dispatch = useDispatch()
 
 
 const onSubmit = task => {
-if(task.text !==""){
+if(task.text.trim() !==""){
     dispatch(addTask(task.text))
     reset()
 }
 else{
     Notiflix.Notify.warning('Field cannot be empty ')}
+    
 }
 
     return (
-        <form className={scss['form-add']} onSubmit={handleSubmit(onSubmit)}>
+        <form className={scss['form-add']} onSubmit={handleSubmit(onSubmit)} autocomplete="off">
             <label htmlFor="createTask"></label>
             <input {...register('text', { required: true })} className={clsx(scss['input-add'], {
             [scss.dark]:theme, [scss['input-required']]:errors.text
